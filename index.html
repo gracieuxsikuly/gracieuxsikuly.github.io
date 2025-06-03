@@ -1,747 +1,726 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracier KAMBALE SIKULY - Ingénieur Informaticien</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!--
-    		Basic
-    	-->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gracieux / Resume / CV</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Gracieux Sikuly portfolio" />
-    <meta name="keywords" content="graciersikuly,graciersikuly@gmail.com, portfolio" />
-    <meta name="author" content="Gracieux Sikuly" />
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #667eea;
+        }
 
-    <!--
-    		Load Fonts
-    	-->
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    <!--
-    		Load CSS
-    	-->
-    <link rel="stylesheet" href="css/basic.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/blogs.css" />
-    <link rel="stylesheet" href="css/ionicons.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/owl.carousel.css" />
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
 
-    <!--
-    		Background Gradient
-    	-->
-    <link rel="stylesheet" href="css/gradient.css" />
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
 
-    <!--
-    		Template New-Skin
-    	-->
-    <link rel="stylesheet" href="css/new-skin/new-skin.css" />
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
 
-    <link rel="stylesheet" href="css/demos/demo-7-colors.css" />
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    <link rel="stylesheet" href="css/new-skin/classic-skin.css" />
-    <link rel="stylesheet" href="css/template-dark/dark.css" />
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
+        .nav-links a:hover {
+            color: #667eea;
+        }
 
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-top: 0;
+            padding-top: 80px;
+        }
 
-    <!--
-    		Favicons
-    	-->
-    <link rel="shortcut icon" href="images/favicons/icons.ico">
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+            animation: float 6s ease-in-out infinite;
+        }
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125314689-11"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
 
-        gtag('config', 'UA-125314689-11');
-    </script>
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
 
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+            color: white;
+            font-weight: bold;
+        }
 
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+            color: white;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 55%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 55%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="page new-skin">
+    <header>
+        <nav class="container">
+            <div class="logo">GS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- preloader -->
-        <div class="preloader">
-            <div class="centrize full-width">
-                <div class="vertical-center">
-                    <div class="spinner">
-                        <div class="double-bounce1"></div>
-                        <div class="double-bounce2"></div>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Gracier KAMBALE SIKULY</h1>
+            <p class="subtitle">Ingénieur Informaticien | Développeur Full-Stack | Expert Cloud & Sécurité</p>
+            <a href="#about" class="cta-button">Découvrir mon profil</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">À Propos</h2>
+            <div class="about-content">
+                <div class="profile-card">
+                    <div class="profile-img">GS</div>
+                    <h3>Gracier KAMBALE SIKULY</h3>
+                    <p>Né le 19 juin 1996</p>
+                    <div class="contact-info">
+                        <p>📧 graciersikuly@gmail.com</p>
+                        <p>📱 (+243) 990 378 202</p>
+                        <p>📍 Goma, Nord-Kivu, RD Congo</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Objectif Professionnel</h3>
+                    <p>Ingénieur informaticien spécialisé en conception et programmation de solutions informatiques avec plus de cinq ans d'expérience. Passionné par l'optimisation des systèmes IT et la sécurité des réseaux, je cherche à intégrer une organisation dynamique où je pourrai mettre à profit mes compétences techniques en développement de bases de données, administration de serveurs, et technologies cloud pour contribuer à des projets innovants et à fort impact.</p>
+                    
+                    <h3 style="margin-top: 2rem;">Langues</h3>
+                    <div class="skill-tags" style="margin-top: 1rem;">
+                        <span class="skill-tag">Français - Excellent</span>
+                        <span class="skill-tag">Anglais - Intermédiaire</span>
+                        <span class="skill-tag">Swahili - Excellent</span>
+                        <span class="skill-tag">Lingala - Intermédiaire</span>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- background -->
-        <div class="background"></div>
-
-        <!--
-			Container
-		-->
-        <div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
-
-            <!--
-				Header
-			-->
-            <header class="header">
-
-                <!-- header profile -->
-                <div class="profile">
-                    <div class="title">Gracieux Sikuly</div>
-                    <div class="subtitle subtitle-typed">
-                        <div class="typing-title">
-                            <p>Devellopeur Web/Mobile</p>
-                            <p>Devellopeur Desktop</p>
-                            <p>Base de donnée</p>
-                        </div>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Développement</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PHP Laravel</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
                     </div>
                 </div>
-
-                <!-- menu btn -->
-                <!--<a href="#" class="menu-btn"><span></span></a>-->
-
-                <!-- menu -->
-                <div class="top-menu">
-                    <ul>
-                        <li class="active">
-                            <a href="#about-card">
-                                <span class="icon ion-person"></span>
-                                <span class="link">Bio</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#resume-card">
-                                <span class="icon ion-android-list"></span>
-                                <span class="link">Resume</span>
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="#contacts-card">
-                                <span class="icon ion-at"></span>
-                                <span class="link">Contact</span>
-                            </a>
-                        </li>
-                    </ul>
+                
+                <div class="skill-category">
+                    <h3>🗄️ Bases de Données</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">DynamoDB</span>
+                    </div>
                 </div>
-
-            </header>
-
-            <!--
-				Card - Started
-			-->
-            <div class="card-started" id="home-card">
-
-                <!--
-					Profile
-				-->
-                <div class="profile no-photo">
-
-                    <!-- profile image -->
-                    <div class="slide" style="background-image: url(images/profile6.png);"></div>
-
-                    <!-- profile titles -->
-                    <div class="title">Gracieux Sikuly</div>
-                    <!--<div class="subtitle">Web Designer</div>-->
-                    <div class="subtitle subtitle-typed">
-                        <div class="typing-title">
-                            <p>Web Developer</p>
-                            <p>Mobil and Desktop Developer</p>
-                            <p>Database Administrator</p>
-                        </div>
+                
+                <div class="skill-category">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS VPC</span>
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">Lambda</span>
+                        <span class="skill-tag">RDS</span>
+                        <span class="skill-tag">Hyper-V</span>
+                        <span class="skill-tag">VMware</span>
                     </div>
-
-                    <!-- profile socials -->
-                    <div class="social">
-                        <a target="_blank" href="https://medium.com/">
-                            <span class="fa fa-medium"></span>
-                        </a>
-                        <a target="_blank" href="https://twitter.com/">
-                            <span class="fa fa-twitter"></span>
-                        </a>
-                        <a target="_blank" href="https://facebook.com/">
-                            <span class="fa fa-facebook-f"></span>
-                        </a>
-                        <a target="_blank" href="https://linkedin.com/">
-                            <span class="fa fa-linkedin"></span>
-                        </a>
-                    </div>
-
-                    <!-- profile buttons -->
-                    <div class="lnks">
-                        <a href="#" class="lnk">
-                            <span class="text">Download CV</span>
-                            <span class="ion ion-android-attach"></span>
-                        </a>
-                        <a href="#" class="lnk discover">
-                            <span class="text">Hire Me</span>
-                            <span class="ion ion-android-mail"></span>
-                        </a>
-                    </div>
-
                 </div>
-
-            </div>
-
-            <!-- 
-				Card - About
-			-->
-            <div class="card-inner animated active" id="about-card">
-                <div class="card-wrap">
-
-                    <!-- 
-						About 
-					-->
-                    <div class="content about">
-
-                        <!-- title -->
-                        <div class="title">About Me</div>
-
-                        <!-- content -->
-                        <div class="row">
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-                                <div class="text-box">
-                                    <p style="text-align: justify;">
-                                        I'm <strong>Gracieux Sikuly</strong> Computer scientist by training, I hold a
-                                        Bac + 5 diploma from the Higher Institute of Computer Science and Management
-                                        (I.S.I.G.). With a varied computer engineer profile of 5 years, I consolidated
-                                        my experience in designing and
-                                        programming, IT solutions to solve problems in the technology community. Some
-                                        areas were at the center of my
-                                        interventions including the design and administration of databases using MS
-                                        Access RDBMS, MySQL, SQLServer, PostgreSQL,
-                                        SQLite, and non-SQL database with MongoDB, FireBase, Amazon DynamoDB, I followed
-                                        a cloud programming module training
-                                        (Cloud develloper) using Amazon Web Service (AWS),information management, data
-                                        monitoring and evaluation, configuration
-                                        and deployment of LAN, WAN, VLAN, Routing and Switching networks under TCP/IP
-                                        architecture, Virtualization: Hyper-V,
-                                        VMware and VM Virtual box, I perfectly master the S.E Windows 7/8/10,11 (expert
-                                        level), Ubuntu / Linux, ICT Support,
-                                        Computer Security as well as the installation and administration of servers
-                                        under the S.E Linux and Windows Server.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-                                <div class="info-list">
-                                    <ul>
-                                        <li><strong>Contact . . . . .</strong> +243 990 378 202</li>
-                                        <li><strong>Residence . . . . .</strong> DRC</li>
-                                        <li><strong>Freelance . . . . .</strong> Available</li>
-                                        <li><strong>Address . . . . .</strong> Nordkivu, Goma</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
+                
+                <div class="skill-category">
+                    <h3>🔒 Sécurité & Réseaux</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Firewall</span>
+                        <span class="skill-tag">VPN</span>
+                        <span class="skill-tag">IDS/IPS</span>
+                        <span class="skill-tag">Ubiquity</span>
+                        <span class="skill-tag">Mikrotik</span>
+                        <span class="skill-tag">Cambium</span>
                     </div>
-
-                    <!--
-						Fun Fact
-					-->
-                    <div class="content fuct">
-
-                        <!-- title -->
-                        <div class="title">Awards</div>
-
-                        <!-- content -->
-                        <div class="row fuct-items">
-
-                            <!-- fuct item -->
-                            <div class="col col-d-3 col-t-3 col-m-6 border-line-v">
-                                <div class="fuct-item">
-                                    <div class="icon"><span class="fa fa-book"></span></div>
-                                    <div class="name">Udacity Cloud Developer Awards</div>
-                                </div>
-                            </div>
-
-                            <!-- fuct item -->
-                            <div class="col col-d-3 col-t-3 col-m-6 border-line-v">
-                                <div class="fuct-item">
-                                    <div class="icon"><span class="fa fa-trophy"></span></div>
-                                    <div class="name">ISIG Computer scientist Diploma</div>
-                                </div>
-                            </div>
-
-                            <!-- fuct item -->
-                            <div class="col col-d-3 col-t-3 col-m-6 border-line-v">
-                                <div class="fuct-item">
-                                    <div class="icon"><span class="fa fa-coffee"></span></div>
-                                    <div class="name">Cisco Networking Award</div>
-                                </div>
-                            </div>
-
-                            <!-- fuct item -->
-                            <div class="col col-d-3 col-t-3 col-m-6 border-line-v">
-                                <div class="fuct-item">
-                                    <div class="icon"><span class="fa fa-pencil"></span></div>
-                                    <div class="name">Data Analyst Awards</div>
-                                </div>
-                            </div>
-
-                            <div class="clear"></div>
-                        </div>
-
-
-
+                </div>
+                
+                <div class="skill-category">
+                    <h3>📊 Analyse & Visualisation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MS Excel</span>
+                        <span class="skill-tag">QGIS</span>
+                        <span class="skill-tag">ArcGIS</span>
                     </div>
-
-                    <!--
-						Services
-					-->
-                    <div class="content services">
-
-                        <!-- title -->
-                        <div class="title">My Services</div>
-
-                        <!-- content -->
-                        <div class="row service-items border-line-v">
-                            <!-- service item -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-h">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <span class="fa fa-book"></span>
-                                    </div>
-                                    <div class="name">
-                                        <span>
-                                            Web develloper </span>
-                                    </div>
-                                    <div class="desc">
-                                        <div>
-                                            Design and development of custom website and web application
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- service item -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-h">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <span class="fa fa-video-camera"></span>
-                                    </div>
-                                    <div class="name">
-                                        <span>
-                                            Mobile Developer </span>
-                                    </div>
-                                    <div class="desc">
-                                        <div>
-                                            Design and development of custom mobil application
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- service item -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-h">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <span class="fa fa-newspaper-o"></span>
-                                    </div>
-                                    <div class="name">
-                                        <span>
-                                            Database development and deployment </span>
-                                    </div>
-                                    <div class="desc">
-                                        <div>
-                                            database development and deployment
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- service item -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-h">
-                                <div class="service-item">
-                                    <div class="icon">
-                                        <span class="fa fa-gamepad"></span>
-                                    </div>
-                                    <div class="name">
-                                        <span>
-                                            Networking and ICT Support</span>
-                                    </div>
-                                    <div class="desc">
-                                        <div>
-                                            Network configuration LAN, WAN, VPN, VLAN and help desk and software and
-                                            hardware maintenance
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🛠️ Outils Spécialisés</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">KoboCollect</span>
+                        <span class="skill-tag">ODK</span>
+                        <span class="skill-tag">CommCare</span>
+                        <span class="skill-tag">DHIS2</span>
+                        <span class="skill-tag">Office 365</span>
                     </div>
-
-
-
                 </div>
             </div>
-
-            <!--
-				Card - Resume
-			-->
-            <div class="card-inner" id="resume-card">
-                <div class="card-wrap">
-
-                    <!--
-						Resume
-					-->
-                    <div class="content resume">
-
-                        <!-- title -->
-                        <div class="title">Resume</div>
-
-                        <!-- content -->
-                        <div class="row">
-
-                            <!-- experience -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-                                <div class="resume-title border-line-h">
-                                    <div class="icon"><i class="fa fa-briefcase"></i></div>
-                                    <div class="name">Experience</div>
-                                </div>
-                                <div class="resume-items">
-                                    <div class="resume-item border-line-h active">
-                                        <div class="date">2020 - Present</div>
-                                        <div class="name">ICT Support Assistant and Software System Developer Manager
-                                        </div>
-                                        <div class="company">Oliversoft</div>
-                                        <p style="text-align: justify;">
-                                            I coordinate and deploy several network installations (LAN, WAN) as part of
-                                            providing internet access to the company's
-                                            several customers, and I participate in a team of design of IT solutions of
-                                            the company, in the design and realization of the applications of
-                                            the management, the websites, the web applications, the mobile applications
-                                            that are delivered to the partners of the
-                                            company.
-                                        </p>
-                                    </div>
-                                    <div class="resume-item border-line-h">
-                                        <div class="date">June 15, 2019 -December 31, 2019</div>
-                                        <div class="name">Database Manager</div>
-                                        <div class="company">CONGO TECHNOLOGY.</div>
-                                        <p style="text-align: justify;">
-                                            I developed and administered the databases of customers of the company Congo
-                                            technology, I developed the websites of
-                                            different customers.
-                                        </p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <div class="date">03 main 2018 - 20 April 2019</div>
-                                        <div class="name">Developer and Data Base Expert</div>
-                                        <div class="company">NTICO-FAMILLY in partnership with UN Habitant and UCBC
-                                        </div>
-                                        <p style="text-align: justify;">
-                                            I participated in the design and field deployment of GED (Gestion
-                                            Electronique de Dossier) software for land
-                                            administration in the districts of KALEHE (SOUTH KIVU), Rutshuru (NORTH
-                                            KIVU) and PIMBO (ITURI/BUNIA); We had conducted
-                                            user training and technical assistance in the field during deployments in
-                                            the three pilot districts of the project and
-                                            had developed and implemented a user guide; In March 2020 NTICO-FAMILLY in
-                                            partnership with UN Habitant and UCBC. I
-                                            developed a mobile application for collecting covid-19 cases called
-                                            COVID-SOFT, an application that makes potential
-                                            covid-19 cases and also analyzes, processing and manages data collected by
-                                            field investigators in the Zero Covid-19
-                                            project in North Kivu.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- education -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-                                <div class="resume-title border-line-h">
-                                    <div class="icon"><i class="fa fa-university"></i></div>
-                                    <div class="name">Education</div>
-                                </div>
-                                <div class="resume-items">
-                                    <div class="resume-item border-line-h">
-                                        <div class="date">2017 - 2019</div>
-                                        <div class="name">Institute of Computer Science and Management (I.S.I.G.)</div>
-                                        <div class="company">DRC/Goma Nord-Kivu</div>
-                                        <p style="text-align: justify;">
-                                            Bachelor's degree (Bac + 5) in computer science, design and programming
-                                            option at the Higher Institute of Computer
-                                            Science and Management (I.S.I.G.) in July 2019 in Goma;
-                                        </p>
-                                    </div>
-                                    <div class="resume-item border-line-h">
-                                        <div class="date">2014 - 2017</div>
-                                        <div class="name">Institute of Computer Science and Management (I.S.I.G.)</div>
-                                        <div class="company">DRC/Goma Nord-Kivu</div>
-                                        <p style="text-align: justify;">
-                                            Grade (Bac + 3) in computer science, at the Higher Institute of Computer
-                                            Science and Management (I.S.I.G.) in July 2017 in Goma;
-                                        </p>
-                                    </div>
-                                    <div class="resume-item border-line-h">
-                                        <div class="date">2013 - 2014</div>
-                                        <div class="name">Yira Complex Scolaire</div>
-                                        <div class="company">DRC/Goma Nord-Kivu</div>
-                                        <p style="text-align: justify;">
-                                            State diploma option Commercial Informatics, in August 2014.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="clear"></div>
-                        </div>
-
-                    </div>
-
-                    <!--
-						Skills
-					-->
-                    <div class="content skills">
-
-                        <!-- title -->
-                        <div class="title">Skills</div>
-
-                        <!-- content -->
-                        <div class="row">
-
-                            <!-- skill item -->
-                            <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                                <div class="skills-list">
-                                    <ul>
-                                        <li class="border-line-h">
-                                            <div class="name">Database Administrator</div>
-                                            <div class="progress">
-                                                <div class="percentage" style="width:90%;"></div>
-                                            </div>
-                                        </li>
-                                        <li class="border-line-h">
-                                            <div class="name">The Power of Observation and Analyse</div>
-                                            <div class="progress">
-                                                <div class="percentage" style="width:65%;"></div>
-                                            </div>
-                                        </li>
-                                        <li class="border-line-h">
-                                            <div class="name">Reasoning and Problem Solving</div>
-                                            <div class="progress">
-                                                <div class="percentage" style="width:75%;"></div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="name">Knowledge of Grammar, Spelling</div>
-                                            <div class="progress">
-                                                <div class="percentage" style="width:85%;"></div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- skill item -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-                                <div class="skills-list dotted">
-                                    <div class="skill-title border-line-h">
-                                        <div class="icon"><i class="fa fa-flag"></i></div>
-                                        <div class="name">Languages</div>
-                                    </div>
-                                    <ul>
-                                        <li class="border-line-h">
-                                            <div class="name">French</div>
-                                            <div class="progress">
-                                                <div class="percentage" style="width:90%;"></div>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="name">English</div>
-                                            <div class="progress ">
-                                                <div class="percentage" style="width:70%;"></div>
-                                            </div>
-                                        </li>
-                                        <li class="border-line-h">
-                                            <div class="name">Swahili</div>
-                                            <div class="progress">
-                                                <div class="percentage" style="width:80%;"></div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- skill item -->
-                            <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-                                <div class="skills-list list">
-                                    <div class="skill-title border-line-h">
-                                        <div class="icon"><i class="fa fa-list"></i></div>
-                                        <div class="name">Knowledge</div>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="name">Adaptability</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">Strong Research Skills</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">The Ability to Get Focused</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">Communicate</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">The Ability to Meet Deadlines</div>
-                                        </li>
-                                        <li>
-                                            <div class="name">Organizational Skills</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="clear"></div>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-            </div>
-
-
-
-
-            <!--
-				Card - Contacts
-			-->
-            <div class="card-inner contacts" id="contacts-card">
-                <div class="card-wrap">
-
-                    <!--
-						Conacts Info
-					-->
-                    <div class="content contacts">
-
-                        <!-- title -->
-                        <div class="title">Contact</div>
-
-                        <!-- content -->
-                        <div class="row">
-                            <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                                <div class="map">
-                                    <iframe width="100%" height="200" frameborder="0" style="border:0"
-                                        referrerpolicy="no-referrer-when-downgrade"
-                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBqHQ0YTvnCWsIR9C10w6NJhnBhNLtSbC8
-                                                                        &zoom=18&q=Oliversoft
-                                                                        Rond point signers, Avenue kanyamuhanga N° 24, Goma" allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <div class="info-list">
-                                    <ul>
-                                        <li><strong>Address . . . . .</strong> Nord-Kivu, Goma(DRC)</li>
-                                        <li><strong>Email . . . . .</strong> graciersikuly@gmail.com</li>
-                                        <li><strong>Phone . . . . .</strong> +243 990 378 202</li>
-                                        <li><strong>Freelance . . . . .</strong> Available</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
-                    </div>
-
-                    <!--
-						Contact Form
-					-->
-                    <div class="content contacts">
-
-                        <!-- title -->
-                        <div class="title">Contact Form</div>
-
-                        <!-- content -->
-                        <div class="row">
-                            <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                                <div class="contact_form">
-                                    <form id="cform" method="post">
-                                        <div class="row">
-                                            <div class="col col-d-6 col-t-6 col-m-12">
-                                                <div class="group-val">
-                                                    <input type="text" name="name" placeholder="Full Name" />
-                                                </div>
-                                            </div>
-                                            <div class="col col-d-6 col-t-6 col-m-12">
-                                                <div class="group-val">
-                                                    <input type="text" name="email" placeholder="Email Address" />
-                                                </div>
-                                            </div>
-                                            <div class="col col-d-12 col-t-12 col-m-12">
-                                                <div class="group-val">
-                                                    <textarea name="message" placeholder="Your Message"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="align-left">
-                                            <a href="#" class="button" onclick="$('#cform').submit(); return false;">
-                                                <span class="text">Send Message</span>
-                                                <span class="arrow"></span>
-                                            </a>
-                                        </div>
-                                    </form>
-                                    <div class="alert-success">
-                                        <p>Thanks, your message is sent successfully.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
         </div>
+    </section>
 
-        <div class="s_overlay"></div>
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Janvier 2024 - Présent</div>
+                        <div class="timeline-title">Consultant en Support ICT</div>
+                        <div class="timeline-company">INTERSOS, Goma</div>
+                        <ul>
+                            <li>Déploiement et configuration des systèmes ICT</li>
+                            <li>Administration des réseaux et systèmes informatiques</li>
+                            <li>Support technique multisite et formation du personnel</li>
+                            <li>Gestion des serveurs hyperviseurs et machines virtuelles</li>
+                            <li>Sécurité des données et configuration des pare-feux</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Juin 2020 - Présent</div>
+                        <div class="timeline-title">Responsable Développement & Support ICT</div>
+                        <div class="timeline-company">OLIVERSOFT, Goma</div>
+                        <ul>
+                            <li>Développement d'applications web et mobiles</li>
+                            <li>Gestion des serveurs d'hébergement et VPS</li>
+                            <li>Déploiement de réseaux longue distance (Ubiquity)</li>
+                            <li>Monitoring des infrastructures réseau</li>
+                            <li>Installation de systèmes de surveillance IP</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mai 2018 - Avril 2019</div>
+                        <div class="timeline-title">Développeur & Gestionnaire BDD</div>
+                        <div class="timeline-company">NTICO-FAMILY (UN Habitant & UCBC)</div>
+                        <ul>
+                            <li>Conception du logiciel GED pour l'administration foncière</li>
+                            <li>Développement de l'application mobile COVID-SOFT</li>
+                            <li>Gestion et optimisation des bases de données</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projets Réalisés</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ELTECH Congo</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Système de réservation d'hébergement web complet avec interface d'administration et gestion des clients.</p>
+                        <a href="https://eltech-congo.cd" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Marché Pour Tous</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Plateforme e-commerce complète permettant la vente en ligne avec système de paiement intégré.</p>
+                        <a href="https://marchepourtous.com" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>FLIC Info</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Site d'actualités dynamique avec système de gestion de contenu et interface responsive.</p>
+                        <a href="https://flic-info.cd" class="project-link" target="_blank">Voir le projet →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Logiciel GED</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Système de Gestion Électronique de Données pour l'administration foncière avec interface intuitive.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>COVID-SOFT Mobile</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Application mobile Android pour la collecte et le suivi des cas de COVID-19.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Infrastructure Réseau IRC Bunia</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Déploiement complet d'un réseau WAN et mise en réseau LAN avec technologie Mikrotik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <footer id="contact">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Contact</h2>
+            <div class="social-links">
+                <a href="mailto:graciersikuly@gmail.com">📧</a>
+                <a href="https://linkedin.com/in/gracieux-sikuly-4aba2118b" target="_blank">💼</a>
+                <a href="https://github.com/gracieuxsikuly" target="_blank">💻</a>
+                <a href="skype:Gracieux Sikuly">📞</a>
+            </div>
+            <p>&copy; 2025 Gracier KAMBALE SIKULY. Tous droits réservés.</p>
+            <p>Goma, Nord-Kivu, République Démocratique du Congo</p>
+        </div>
+    </footer>
 
-    <!--
-		jQuery Scripts
-	-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.validate.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/imagesloaded.pkgd.js"></script>
-    <script src="js/isotope.pkgd.js"></script>
-    <script src="js/jquery.slimscroll.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="../../../use.fontawesome.com/8da76d029b.js"></script>
+    <script>
+        // Smooth scrolling pour les liens de navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    <!--
-		Google map api
-	-->
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz2w7HUaWudHwd7AWQpCL48Qs050WOn9s"></script> -->
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-    <!--
-		Main Scripts
-	-->
-    <script src="js/scripts.js"></script>
-
+        // Observer tous les éléments à animer
+        document.querySelectorAll('.skill-category, .timeline-item, .project-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
-
-<!-- Mirrored from bslthemes.com/html/ryan/index-new-demo-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Jan 2023 10:11:14 GMT -->
-
 </html>
